@@ -32,10 +32,10 @@ class App extends Component {
 
     getTimeString() {
         const currTime = this.state.time;
-        const [hours, minutes, seconds] = [currTime.getHours(), currTime.getMinutes(), currTime.getSeconds(),];
+        const [hours, minutes, seconds] = [currTime.getHours(), currTime.getMinutes(), currTime.getSeconds()];
         
-        const amOrPm= hours>= 12? "PM" :"AM";
-        const twelveHourFormat =hours >12 ? hours-12: hours;
+        const amOrPm= hours >= 12 ? "PM" :"AM";
+        const twelveHourFormat =hours > 12 ? hours-12: hours;
         const hourString = this.padNumberToTwoDigits(twelveHourFormat); 
         const minuteString= this.padNumberToTwoDigits(minutes);
         const secondString = this.padNumberToTwoDigits(seconds);
